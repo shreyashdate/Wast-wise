@@ -158,6 +158,7 @@
   font-family: 'Cormorant Garamond', serif; font-size: 77px; font-weight: 300;
   line-height: 1; margin-bottom: 14px;
   background: linear-gradient(135deg, var(--gm), var(--gl));
+  background-clip: text;
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .landing-page .feat-title { font-size: 31px; font-weight: 500; color: var(--tx); margin-bottom: 9px; }
@@ -262,3 +263,132 @@
 
 @keyframes fsu { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 .landing-page .anim { animation: fsu .65s cubic-bezier(.22, 1, .36, 1) both; }
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 768px) {
+  .landing-page .nav {
+    padding: 0 20px;
+    height: 60px;
+  }
+  
+  .landing-page .nav-logo {
+    font-size: 24px;
+  }
+  
+  .landing-page .nav-links {
+    display: none;
+  }
+  
+  .landing-page .nav-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+  
+  .landing-page .nav-btn .plus {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .landing-page .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-top: 60px;
+  }
+
+  .landing-page .hero-content {
+    padding: 60px 24px;
+  }
+  
+  .landing-page .hero-img {
+    height: 350px;
+    order: 2; /* Move image below text if needed, though they stack naturally */
+  }
+
+  .landing-page .h1 {
+    font-size: 42px;
+  }
+
+  .landing-page .hero-sub {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+
+  .landing-page section {
+    padding: 60px 24px;
+  }
+
+  .landing-page .sh2 {
+    font-size: 32px;
+  }
+
+  .landing-page .ssub {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+
+  /* Grid Conversions */
+  .landing-page .prob-grid,
+  .landing-page .abt-layout,
+  .landing-page .feat-grid,
+  .landing-page .how-steps,
+  .landing-page .stats-grid,
+  .landing-page .ben-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .landing-page .abt-layout {
+    gap: 40px;
+  }
+
+  .landing-page .abt-stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .landing-page .how-steps::before {
+    display: none;
+  }
+
+  .landing-page .how-step {
+    padding: 0;
+  }
+
+  .landing-page .cta {
+    padding: 60px 24px;
+  }
+
+  .landing-page .cta-h2 {
+    font-size: 38px;
+  }
+
+  .landing-page .cta-sub {
+    font-size: 18px;
+  }
+
+  .landing-page .cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .landing-page .btn-g,
+  .landing-page .btn-wo {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .landing-page footer {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .landing-page .flinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
