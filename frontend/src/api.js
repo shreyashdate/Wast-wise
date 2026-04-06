@@ -1,4 +1,4 @@
-const API_BASE = 'https://wast-wise-backend.onrender.com';
+const API_BASE = 'https://wast-wise-backend.onrender.com/api';
 
 async function request(url, options = {}) {
   const res = await fetch(`${API_BASE}${url}`, {
